@@ -27,13 +27,13 @@ namespace PI_Projekt
             string korisnickoIme = txtIme.Text;
             string lozinka = txtLozinka.Text;
 
-            if (korisnickoIme == "admin" && lozinka == "admin123")
+            if (korisnickoIme == "Zaposlenik1" && lozinka == "1234")
             {
                 MessageBox.Show("Prijava uspješna!");
 
                 this.Hide();
-                StartForm startForm = new StartForm();
-                startForm.Show();
+                ZaposlenikForm zaposlenik = new ZaposlenikForm();
+                zaposlenik.Show();
             }
             else
             {
