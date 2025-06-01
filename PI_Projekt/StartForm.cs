@@ -17,7 +17,7 @@ namespace PI_Projekt
         {
             LoginForm login = new LoginForm();
             login.Show();
-            this.Hide(); 
+            this.Hide();
         }
 
         private void BtnKupac_Click(object sender, EventArgs e)
@@ -25,6 +25,11 @@ namespace PI_Projekt
             SlanjeForm slanjeForm = new SlanjeForm();
             slanjeForm.Show();
             this.Hide();
+        }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

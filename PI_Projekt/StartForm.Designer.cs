@@ -36,18 +36,23 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(39, 52);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(49, 75);
             label1.Name = "label1";
-            label1.Size = new Size(342, 20);
+            label1.Size = new Size(494, 28);
             label1.TabIndex = 0;
             label1.Text = "Želite li korisiti aplikaciju kao zaposlenik ili kupac?";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.Click += label1_Click;
             // 
             // BtnZaposlenik
             // 
-            BtnZaposlenik.Location = new Point(66, 95);
+            BtnZaposlenik.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            BtnZaposlenik.FlatStyle = FlatStyle.System;
+            BtnZaposlenik.Font = new Font("Segoe UI", 10F);
+            BtnZaposlenik.Location = new Point(358, 177);
             BtnZaposlenik.Name = "BtnZaposlenik";
-            BtnZaposlenik.Size = new Size(94, 29);
+            BtnZaposlenik.Size = new Size(142, 60);
             BtnZaposlenik.TabIndex = 1;
             BtnZaposlenik.Text = "Zaposlenik";
             BtnZaposlenik.UseVisualStyleBackColor = true;
@@ -55,24 +60,32 @@
             // 
             // BtnKupac
             // 
-            BtnKupac.Location = new Point(257, 95);
+            BtnKupac.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            BtnKupac.BackColor = Color.LightSteelBlue;
+            BtnKupac.FlatStyle = FlatStyle.System;
+            BtnKupac.Font = new Font("Segoe UI", 10F);
+            BtnKupac.Location = new Point(97, 177);
             BtnKupac.Name = "BtnKupac";
-            BtnKupac.Size = new Size(94, 29);
+            BtnKupac.Size = new Size(142, 60);
             BtnKupac.TabIndex = 2;
             BtnKupac.Text = "Kupac";
-            BtnKupac.UseVisualStyleBackColor = true;
+            BtnKupac.UseVisualStyleBackColor = false;
             BtnKupac.Click += BtnKupac_Click;
             // 
             // StartForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(423, 164);
+            BackColor = Color.Azure;
+            ClientSize = new Size(601, 315);
             Controls.Add(BtnKupac);
             Controls.Add(BtnZaposlenik);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "StartForm";
-            Text = "Dobrodošli!";
+            Text = "EasyParts - Odaberite ulogu";
+            Load += StartForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
