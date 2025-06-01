@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Interop;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,8 +65,25 @@ namespace PI_Projekt
             comboKonfiguracije.Items.Add("Gaming konfiguracija");
             comboKonfiguracije.Items.Add("Budget konfiguracija");
             comboKonfiguracije.Items.Add("Video editing konfiguracija");
+            comboKonfiguracije.Items.Add("Konfiguracija kupca");
 
-            
+        }
+
+        private void btnNazad_Click(object sender, EventArgs e)
+        {
+            DialogResult rezultat = MessageBox.Show(
+            "Jeste li sigurni da se želite vratiti na početni zaslon?",
+            "Potvrda",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+            );
+
+            if (rezultat == DialogResult.Yes)
+            {
+                this.Hide();
+                StartForm back = new StartForm();
+                back.Show();
+            }
         }
     }
 }

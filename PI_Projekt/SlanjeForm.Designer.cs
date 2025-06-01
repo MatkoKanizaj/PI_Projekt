@@ -35,6 +35,8 @@
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             label2 = new Label();
+            btnNazad = new Button();
+            sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             SuspendLayout();
             // 
             // comboKonfiguracije
@@ -57,7 +59,7 @@
             // 
             // btnPosalji
             // 
-            btnPosalji.Location = new Point(202, 291);
+            btnPosalji.Location = new Point(309, 293);
             btnPosalji.Name = "btnPosalji";
             btnPosalji.Size = new Size(167, 64);
             btnPosalji.TabIndex = 2;
@@ -104,11 +106,22 @@
             label2.TabIndex = 6;
             label2.Text = "Unos e-mail adrese za slanje";
             // 
+            // btnNazad
+            // 
+            btnNazad.Location = new Point(102, 293);
+            btnNazad.Name = "btnNazad";
+            btnNazad.Size = new Size(167, 64);
+            btnNazad.TabIndex = 7;
+            btnNazad.Text = "Nazad";
+            btnNazad.UseVisualStyleBackColor = true;
+            btnNazad.Click += btnNazad_Click;
+            // 
             // SlanjeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(642, 404);
+            Controls.Add(btnNazad);
             Controls.Add(label2);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
@@ -132,5 +145,7 @@
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private Label label2;
+        private Button btnNazad;
+        private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
     }
 }
