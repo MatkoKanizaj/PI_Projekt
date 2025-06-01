@@ -1,49 +1,73 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
 
 namespace PI_Projekt
 {
     public partial class ZaposlenikForm : Form
     {
-        string konekcija = "Server=31.147.206.65;Database=PI2425_mkanizaj23_DB;User Id=PI2425_mkanizaj23_User;Password=-K>rQwHt;Encrypt=False;TrustServerCertificate=True;";
-
         public ZaposlenikForm()
         {
             InitializeComponent();
+            DB.SetConfiguration("PI2425_mkanizaj23_DB", "PI2425_mkanizaj23_User", "-K>rQwHt");
             UcitajKomponente();
         }
 
         private void UcitajKomponente()
         {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+
+            dataGridView1.Columns.Add("Naziv", "Naziv");
+            dataGridView1.Columns.Add("Tip", "Tip");
+            dataGridView1.Columns.Add("Proizvodac", "Proizvođač");
+            dataGridView1.Columns.Add("Model", "Model");
+            dataGridView1.Columns.Add("Cijena", "Cijena");
+            dataGridView1.Columns.Add("KolicinaNaSkladistu", "Količina");
+            dataGridView1.Columns.Add("Opis", "Opis");
+            dataGridView1.Columns.Add("Kompatibilnost", "Kompatibilnost");
+
+            List<Komponenta> lista = KomponentaRepozitorij.DohvatiSve();
+
+            foreach (var k in lista)
+            {
+                dataGridView1.Rows.Add(
+                    k.Naziv,
+                    k.Tip,
+                    k.Proizvodac,
+                    k.Model,
+                    k.Cijena.ToString("F2"),
+                    k.KolicinaNaSkladistu,
+                    k.Opis,
+                    k.Kompatibilnost
+                );
+            }
+        }
+
+        private void BtnDodaj_Click(object sender, EventArgs e)
+        {
+            Komponenta nova = new Komponenta
+            {
+                Naziv = txtNaziv.Text,
+                Tip = txtTip.Text,
+                Proizvodac = txtproiz.Text,
+                Model = txtModel.Text,
+                Cijena = decimal.Parse(txtCijena.Text),
+                KolicinaNaSkladistu = int.Parse(txtKolicina.Text),
+                Opis = txtOpis.Text,
+                Kompatibilnost = txtKompatibilnost.Text
+            };
+
             try
             {
-          
-                DataTable tablica = new DataTable();
-
-               
-                using (SqlConnection veza = new SqlConnection(konekcija))
-                {
-                    veza.Open();
-
-                    string upit = "SELECT Naziv, Tip, Proizvođač, Model, Cijena, KoličinaNaSkladištu, Opis, Kompatibilnost FROM Komponenta";
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(upit, veza);
-                    adapter.Fill(tablica);
-
-                    dataGridView1.DataSource = tablica;
-                }
+                KomponentaRepozitorij.Dodaj(nova);
+                MessageBox.Show("Komponenta uspješno dodana.");
+                UcitajKomponente();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Greška pri dohvaćanju podataka: ");
+                MessageBox.Show("Greška prilikom dodavanja: " + ex.Message);
             }
         }
     }

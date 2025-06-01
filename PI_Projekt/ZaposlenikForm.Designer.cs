@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
+            txtNaziv = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtKolicina = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtCijena = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            txtproiz = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
+            txtTip = new TextBox();
             label6 = new Label();
-            textBox6 = new TextBox();
+            txtModel = new TextBox();
             label7 = new Label();
-            textBox7 = new TextBox();
+            txtOpis = new TextBox();
             label8 = new Label();
-            textBox8 = new TextBox();
+            txtKompatibilnost = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -61,12 +61,12 @@
             dataGridView1.Size = new Size(1068, 559);
             dataGridView1.TabIndex = 0;
             // 
-            // textBox1
+            // txtNaziv
             // 
-            textBox1.Location = new Point(174, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(257, 27);
-            textBox1.TabIndex = 1;
+            txtNaziv.Location = new Point(174, 29);
+            txtNaziv.Name = "txtNaziv";
+            txtNaziv.Size = new Size(257, 27);
+            txtNaziv.TabIndex = 1;
             // 
             // label1
             // 
@@ -86,12 +86,12 @@
             label2.TabIndex = 4;
             label2.Text = "Cijena:";
             // 
-            // textBox2
+            // txtKolicina
             // 
-            textBox2.Location = new Point(174, 260);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(257, 27);
-            textBox2.TabIndex = 3;
+            txtKolicina.Location = new Point(174, 260);
+            txtKolicina.Name = "txtKolicina";
+            txtKolicina.Size = new Size(257, 27);
+            txtKolicina.TabIndex = 3;
             // 
             // label3
             // 
@@ -102,12 +102,12 @@
             label3.TabIndex = 6;
             label3.Text = "Količina:";
             // 
-            // textBox3
+            // txtCijena
             // 
-            textBox3.Location = new Point(174, 209);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(257, 27);
-            textBox3.TabIndex = 5;
+            txtCijena.Location = new Point(174, 209);
+            txtCijena.Name = "txtCijena";
+            txtCijena.Size = new Size(257, 27);
+            txtCijena.TabIndex = 5;
             // 
             // label4
             // 
@@ -118,12 +118,12 @@
             label4.TabIndex = 8;
             label4.Text = "Proizvođač:";
             // 
-            // textBox4
+            // txtproiz
             // 
-            textBox4.Location = new Point(174, 120);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(257, 27);
-            textBox4.TabIndex = 7;
+            txtproiz.Location = new Point(174, 120);
+            txtproiz.Name = "txtproiz";
+            txtproiz.Size = new Size(257, 27);
+            txtproiz.TabIndex = 7;
             // 
             // label5
             // 
@@ -134,12 +134,12 @@
             label5.TabIndex = 10;
             label5.Text = "Tip:";
             // 
-            // textBox5
+            // txtTip
             // 
-            textBox5.Location = new Point(174, 74);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(257, 27);
-            textBox5.TabIndex = 9;
+            txtTip.Location = new Point(174, 74);
+            txtTip.Name = "txtTip";
+            txtTip.Size = new Size(257, 27);
+            txtTip.TabIndex = 9;
             // 
             // label6
             // 
@@ -150,12 +150,12 @@
             label6.TabIndex = 14;
             label6.Text = "Opis:";
             // 
-            // textBox6
+            // txtModel
             // 
-            textBox6.Location = new Point(174, 160);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(257, 27);
-            textBox6.TabIndex = 13;
+            txtModel.Location = new Point(174, 160);
+            txtModel.Name = "txtModel";
+            txtModel.Size = new Size(257, 27);
+            txtModel.TabIndex = 13;
             // 
             // label7
             // 
@@ -166,12 +166,12 @@
             label7.TabIndex = 12;
             label7.Text = "Model:";
             // 
-            // textBox7
+            // txtOpis
             // 
-            textBox7.Location = new Point(174, 313);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(257, 27);
-            textBox7.TabIndex = 11;
+            txtOpis.Location = new Point(174, 313);
+            txtOpis.Name = "txtOpis";
+            txtOpis.Size = new Size(257, 27);
+            txtOpis.TabIndex = 11;
             // 
             // label8
             // 
@@ -182,12 +182,12 @@
             label8.TabIndex = 16;
             label8.Text = "Kompatibilnost:";
             // 
-            // textBox8
+            // txtKompatibilnost
             // 
-            textBox8.Location = new Point(174, 366);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(257, 27);
-            textBox8.TabIndex = 15;
+            txtKompatibilnost.Location = new Point(174, 366);
+            txtKompatibilnost.Name = "txtKompatibilnost";
+            txtKompatibilnost.Size = new Size(257, 27);
+            txtKompatibilnost.TabIndex = 15;
             // 
             // button1
             // 
@@ -197,6 +197,7 @@
             button1.TabIndex = 17;
             button1.Text = "Dodaj";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += BtnDodaj_Click;
             // 
             // button2
             // 
@@ -235,21 +236,21 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label8);
-            Controls.Add(textBox8);
+            Controls.Add(txtKompatibilnost);
             Controls.Add(label6);
-            Controls.Add(textBox6);
+            Controls.Add(txtModel);
             Controls.Add(label7);
-            Controls.Add(textBox7);
+            Controls.Add(txtOpis);
             Controls.Add(label5);
-            Controls.Add(textBox5);
+            Controls.Add(txtTip);
             Controls.Add(label4);
-            Controls.Add(textBox4);
+            Controls.Add(txtproiz);
             Controls.Add(label3);
-            Controls.Add(textBox3);
+            Controls.Add(txtCijena);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtKolicina);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtNaziv);
             Controls.Add(dataGridView1);
             Name = "ZaposlenikForm";
             Text = "Form1";
@@ -261,22 +262,22 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private TextBox txtNaziv;
         private Label label1;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtKolicina;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtCijena;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox txtproiz;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox txtTip;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox txtModel;
         private Label label7;
-        private TextBox textBox7;
+        private TextBox txtOpis;
         private Label label8;
-        private TextBox textBox8;
+        private TextBox txtKompatibilnost;
         private Button button1;
         private Button button2;
         private Button button3;
