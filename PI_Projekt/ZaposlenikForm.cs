@@ -70,5 +70,74 @@ namespace PI_Projekt
                 MessageBox.Show("Greška prilikom dodavanja: " + ex.Message);
             }
         }
+
+        private void ObrisiKomponentu()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string naziv = dataGridView1.SelectedRows[0].Cells["Naziv"].Value.ToString();
+
+                DB.OpenConnection();
+
+                string upit = $"DELETE FROM Komponenta WHERE Naziv = '{naziv}'";
+                DB.ExecuteCommand(upit);
+
+                MessageBox.Show("Obrisano.");
+                UcitajKomponente();
+
+                DB.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Odaberi red za brisanje.");
+            }
+        }
+
+
+        private void UrediKomponentu()
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string naziv = dataGridView1.SelectedRows[0].Cells["Naziv"].Value.ToString();
+
+                DB.OpenConnection();
+
+                string upit = $@"
+            UPDATE Komponenta SET
+                Tip = '{txtTip.Text}',
+                Proizvođač = '{txtproiz.Text}',
+                Model = '{txtModel.Text}',
+                Cijena = {txtCijena.Text.Replace(",", ".")},
+                KoličinaNaSkladištu = '{txtKolicina.Text}',
+                Opis = '{txtOpis.Text}',
+                Kompatibilnost = '{txtKompatibilnost.Text}'
+            WHERE Naziv = '{naziv}'";
+
+                DB.ExecuteCommand(upit);
+
+                MessageBox.Show("Uređeno.");
+                UcitajKomponente();
+
+                DB.CloseConnection();
+            }
+            else
+            {
+                MessageBox.Show("Odaberi red koji želiš urediti.");
+            }
+        }
+
+        private void BtnObrisi_Click(object sender, EventArgs e)
+        {
+            ObrisiKomponentu();
+        }
+        private void BtnUredi_Click(object sender, EventArgs e)
+        {
+            UrediKomponentu();
+        }
+
+        private void BtnOsvjezi_Click(object sender, EventArgs e)
+        {
+            UcitajKomponente();
+        }
     }
 }

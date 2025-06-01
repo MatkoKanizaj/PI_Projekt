@@ -51,7 +51,7 @@ namespace PI_Projekt
         {
             DB.OpenConnection();
 
-            string upit = $@"
+            string sql = $@"
                 INSERT INTO Komponenta (Naziv, Tip, Proizvođač, Model, Cijena, KoličinaNaSkladištu, Opis, Kompatibilnost)
                 VALUES (
                     '{k.Naziv}',
@@ -64,8 +64,10 @@ namespace PI_Projekt
                     '{k.Kompatibilnost}'
                 )";
 
-            DB.ExecuteCommand(upit);
+            DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
+
+
     }
 }

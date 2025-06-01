@@ -201,30 +201,33 @@
             // 
             // button2
             // 
-            button2.Location = new Point(271, 528);
+            button2.Location = new Point(235, 514);
             button2.Name = "button2";
             button2.Size = new Size(125, 50);
             button2.TabIndex = 18;
             button2.Text = "Osvježi";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += BtnOsvjezi_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(47, 528);
+            button3.Location = new Point(47, 514);
             button3.Name = "button3";
             button3.Size = new Size(125, 50);
             button3.TabIndex = 19;
             button3.Text = "Obriši";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += BtnObrisi_Click;
             // 
             // button4
             // 
-            button4.Location = new Point(271, 433);
+            button4.Location = new Point(235, 433);
             button4.Name = "button4";
             button4.Size = new Size(125, 50);
             button4.TabIndex = 20;
             button4.Text = "Uredi";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += BtnUredi_Click;
             // 
             // ZaposlenikForm
             // 

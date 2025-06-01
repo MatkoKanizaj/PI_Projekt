@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PI_Projekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+610e4a9ea3f0acb922bd8dd1e54a4f523ec65e68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0aa380eecd500076772223262d0ced9e306bf9bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("PI_Projekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PI_Projekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
