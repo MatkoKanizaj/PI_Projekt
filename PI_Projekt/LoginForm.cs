@@ -40,6 +40,23 @@ namespace PI_Projekt
                 MessageBox.Show("Pogrešno korisničko ime ili lozinka.");
             }
         }
+
+        private void btnOdustani_click(object sender, EventArgs e)
+        {
+            DialogResult rezultat = MessageBox.Show(
+            "Jeste li sigurni da se želite vratiti na početni zaslon?",
+            "Potvrda",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+            );
+
+            if (rezultat == DialogResult.Yes)
+            {
+                this.Hide();
+                StartForm back = new StartForm();
+                back.Show();
+            }
+        }
     }
 }
 

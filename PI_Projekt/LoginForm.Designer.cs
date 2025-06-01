@@ -33,11 +33,12 @@
             txtLozinka = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // BtnPrijava
             // 
-            BtnPrijava.Location = new Point(153, 178);
+            BtnPrijava.Location = new Point(210, 177);
             BtnPrijava.Name = "BtnPrijava";
             BtnPrijava.Size = new Size(123, 49);
             BtnPrijava.TabIndex = 0;
@@ -78,11 +79,22 @@
             label2.TabIndex = 4;
             label2.Text = "Lozinka:";
             // 
+            // button1
+            // 
+            button1.Location = new Point(81, 177);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 49);
+            button1.TabIndex = 5;
+            button1.Text = "Odustani";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += btnOdustani_click;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(424, 249);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtLozinka);
@@ -101,5 +113,6 @@
         private Label label1;
         private Label label2;
         private Button BtnPrijava;
+        private Button button1;
     }
 }

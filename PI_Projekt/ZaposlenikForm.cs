@@ -139,5 +139,22 @@ namespace PI_Projekt
         {
             UcitajKomponente();
         }
+
+        private void Odjava_Click(object sender, EventArgs e)
+        {
+            DialogResult rezultat = MessageBox.Show(
+            "Jeste li sigurni da se želite vratiti na početni zaslon?",
+            "Potvrda",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+            );
+
+            if (rezultat == DialogResult.Yes)
+            {
+                this.Hide();
+                StartForm back = new StartForm();
+                back.Show();
+            }
+        }
     }
 }

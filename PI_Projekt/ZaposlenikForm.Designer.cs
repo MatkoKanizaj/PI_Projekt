@@ -49,6 +49,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            Odjava = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -191,7 +192,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(47, 433);
+            button1.Location = new Point(97, 420);
             button1.Name = "button1";
             button1.Size = new Size(125, 50);
             button1.TabIndex = 17;
@@ -201,7 +202,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(235, 514);
+            button2.Location = new Point(253, 420);
             button2.Name = "button2";
             button2.Size = new Size(125, 50);
             button2.TabIndex = 18;
@@ -211,7 +212,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(47, 514);
+            button3.Location = new Point(253, 485);
             button3.Name = "button3";
             button3.Size = new Size(125, 50);
             button3.TabIndex = 19;
@@ -221,7 +222,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(235, 433);
+            button4.Location = new Point(97, 485);
             button4.Name = "button4";
             button4.Size = new Size(125, 50);
             button4.TabIndex = 20;
@@ -229,11 +230,22 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += BtnUredi_Click;
             // 
+            // Odjava
+            // 
+            Odjava.Location = new Point(97, 541);
+            Odjava.Name = "Odjava";
+            Odjava.Size = new Size(281, 50);
+            Odjava.TabIndex = 21;
+            Odjava.Text = "Odjava";
+            Odjava.UseVisualStyleBackColor = true;
+            Odjava.Click += Odjava_Click;
+            // 
             // ZaposlenikForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1584, 619);
+            Controls.Add(Odjava);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -285,5 +297,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Button Odjava;
     }
 }
