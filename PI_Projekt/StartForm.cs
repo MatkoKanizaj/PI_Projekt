@@ -22,7 +22,9 @@ namespace PI_Projekt
 
         private void BtnKupac_Click(object sender, EventArgs e)
         {
-           
+            SlanjeForm slanjeForm = new SlanjeForm();
+            slanjeForm.Show();
+            this.Hide();
         }
     }
 }

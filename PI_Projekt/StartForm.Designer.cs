@@ -61,6 +61,7 @@
             BtnKupac.TabIndex = 2;
             BtnKupac.Text = "Kupac";
             BtnKupac.UseVisualStyleBackColor = true;
+            BtnKupac.Click += BtnKupac_Click;
             // 
             // StartForm
             // 
