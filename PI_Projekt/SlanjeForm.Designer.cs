@@ -42,7 +42,7 @@
             // comboKonfiguracije
             // 
             comboKonfiguracije.FormattingEnabled = true;
-            comboKonfiguracije.Location = new Point(328, 72);
+            comboKonfiguracije.Location = new Point(346, 76);
             comboKonfiguracije.Name = "comboKonfiguracije";
             comboKonfiguracije.Size = new Size(226, 28);
             comboKonfiguracije.TabIndex = 0;
@@ -50,16 +50,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(71, 72);
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(45, 72);
             label1.Name = "label1";
-            label1.Size = new Size(206, 20);
+            label1.Size = new Size(269, 28);
             label1.TabIndex = 1;
             label1.Text = "Odabir konfiguracije za slanje";
             label1.Click += label1_Click;
             // 
             // btnPosalji
             // 
-            btnPosalji.Location = new Point(309, 293);
+            btnPosalji.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            btnPosalji.Location = new Point(328, 293);
             btnPosalji.Name = "btnPosalji";
             btnPosalji.Size = new Size(167, 64);
             btnPosalji.TabIndex = 2;
@@ -69,7 +71,7 @@
             // 
             // txtemail
             // 
-            txtemail.Location = new Point(328, 145);
+            txtemail.Location = new Point(346, 152);
             txtemail.Name = "txtemail";
             txtemail.Size = new Size(226, 27);
             txtemail.TabIndex = 3;
@@ -77,7 +79,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(127, 224);
+            radioButton1.Location = new Point(117, 224);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(152, 24);
             radioButton1.TabIndex = 4;
@@ -89,7 +91,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(316, 224);
+            radioButton2.Location = new Point(328, 224);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(160, 24);
             radioButton2.TabIndex = 5;
@@ -100,14 +102,16 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(71, 148);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.Location = new Point(45, 148);
             label2.Name = "label2";
-            label2.Size = new Size(198, 20);
+            label2.Size = new Size(257, 28);
             label2.TabIndex = 6;
             label2.Text = "Unos e-mail adrese za slanje";
             // 
             // btnNazad
             // 
+            btnNazad.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             btnNazad.Location = new Point(102, 293);
             btnNazad.Name = "btnNazad";
             btnNazad.Size = new Size(167, 64);
@@ -120,6 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(642, 404);
             Controls.Add(btnNazad);
             Controls.Add(label2);
@@ -130,7 +135,7 @@
             Controls.Add(label1);
             Controls.Add(comboKonfiguracije);
             Name = "SlanjeForm";
-            Text = "SlanjeForm";
+            Text = "Dijeljenje konfiguracije";
             Load += SlanjeForm_Load;
             ResumeLayout(false);
             PerformLayout();

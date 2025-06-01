@@ -156,5 +156,10 @@ namespace PI_Projekt
                 back.Show();
             }
         }
+
+        private void ZaposlenikForm_Load(object sender, EventArgs e)
+        {
+                
+        }
     }
 }

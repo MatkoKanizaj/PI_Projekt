@@ -49,7 +49,7 @@
             // 
             BtnZaposlenik.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             BtnZaposlenik.FlatStyle = FlatStyle.System;
-            BtnZaposlenik.Font = new Font("Segoe UI", 10F);
+            BtnZaposlenik.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             BtnZaposlenik.Location = new Point(358, 177);
             BtnZaposlenik.Name = "BtnZaposlenik";
             BtnZaposlenik.Size = new Size(142, 60);
@@ -63,7 +63,7 @@
             BtnKupac.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             BtnKupac.BackColor = Color.LightSteelBlue;
             BtnKupac.FlatStyle = FlatStyle.System;
-            BtnKupac.Font = new Font("Segoe UI", 10F);
+            BtnKupac.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             BtnKupac.Location = new Point(97, 177);
             BtnKupac.Name = "BtnKupac";
             BtnKupac.Size = new Size(142, 60);

@@ -38,7 +38,8 @@
             // 
             // BtnPrijava
             // 
-            BtnPrijava.Location = new Point(210, 177);
+            BtnPrijava.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            BtnPrijava.Location = new Point(249, 177);
             BtnPrijava.Name = "BtnPrijava";
             BtnPrijava.Size = new Size(123, 49);
             BtnPrijava.TabIndex = 0;
@@ -81,7 +82,8 @@
             // 
             // button1
             // 
-            button1.Location = new Point(81, 177);
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            button1.Location = new Point(57, 177);
             button1.Name = "button1";
             button1.Size = new Size(123, 49);
             button1.TabIndex = 5;
@@ -93,6 +95,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(424, 249);
             Controls.Add(button1);
             Controls.Add(label2);
@@ -100,6 +103,7 @@
             Controls.Add(txtLozinka);
             Controls.Add(txtIme);
             Controls.Add(BtnPrijava);
+            ForeColor = SystemColors.ControlText;
             Name = "LoginForm";
             Text = "Prijava zaposlenika";
             Load += LoginForm_Load;

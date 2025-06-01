@@ -5,9 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Interop;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace PI_Projekt
 {
@@ -29,35 +32,40 @@ namespace PI_Projekt
         }
 
         private void btnPosalji_click(object sender, EventArgs e)
-        {
-            string konfiguracija = comboKonfiguracije.Text;
-            string primatelj = txtemail.Text;
-
-            if (konfiguracija == "")
+{
+            if (comboKonfiguracije.SelectedIndex == -1)
             {
-                MessageBox.Show("Odaberi konfiguraciju!", "Greška");
+                MessageBox.Show("Molimo odaberite konfiguraciju.");
                 return;
             }
 
+            string konfiguracija = comboKonfiguracije.SelectedItem.ToString();
+
+   
             if (radioButton2.Checked)
             {
-                if (primatelj == "")
+                string email = txtemail.Text;
+
+                if (string.IsNullOrWhiteSpace(email))
                 {
-                    MessageBox.Show("Unesi e-mail primatelja!", "Greška");
+                    MessageBox.Show("Unesite e-mail adresu.");
                     return;
                 }
 
-                MessageBox.Show("Konfiguracija \"" + konfiguracija + "\" poslana na e-mail: " + primatelj + ".", "Uspješno");
+       
+                MessageBox.Show($"Konfiguracija '{konfiguracija}' poslana je na e-mail: {email}");
             }
             else if (radioButton1.Checked)
             {
-                MessageBox.Show("Konfiguracija \"" + konfiguracija + "\" proslijeđena zaposleniku.", "Uspješno");
+      
+                MessageBox.Show($"Konfiguracija '{konfiguracija}' poslana je zaposleniku u trgovini.");
             }
             else
             {
-                MessageBox.Show("Odaberi način slanja!", "Greška");
+                MessageBox.Show("Molim odaberite način slanja (e-mail ili zaposleniku).");
             }
         }
+
 
         private void SlanjeForm_Load(object sender, EventArgs e)
         {
@@ -85,5 +93,6 @@ namespace PI_Projekt
                 back.Show();
             }
         }
+
     }
 }

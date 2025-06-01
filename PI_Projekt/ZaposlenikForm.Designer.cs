@@ -192,6 +192,7 @@
             // 
             // button1
             // 
+            button1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             button1.Location = new Point(97, 420);
             button1.Name = "button1";
             button1.Size = new Size(125, 50);
@@ -202,6 +203,7 @@
             // 
             // button2
             // 
+            button2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             button2.Location = new Point(253, 420);
             button2.Name = "button2";
             button2.Size = new Size(125, 50);
@@ -212,6 +214,7 @@
             // 
             // button3
             // 
+            button3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             button3.Location = new Point(253, 485);
             button3.Name = "button3";
             button3.Size = new Size(125, 50);
@@ -222,6 +225,7 @@
             // 
             // button4
             // 
+            button4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             button4.Location = new Point(97, 485);
             button4.Name = "button4";
             button4.Size = new Size(125, 50);
@@ -232,6 +236,7 @@
             // 
             // Odjava
             // 
+            Odjava.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
             Odjava.Location = new Point(97, 541);
             Odjava.Name = "Odjava";
             Odjava.Size = new Size(281, 50);
@@ -244,6 +249,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(1584, 619);
             Controls.Add(Odjava);
             Controls.Add(button4);
@@ -268,7 +274,8 @@
             Controls.Add(txtNaziv);
             Controls.Add(dataGridView1);
             Name = "ZaposlenikForm";
-            Text = "Form1";
+            Text = "Upravljanje komponentama - baza podataka";
+            Load += ZaposlenikForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
