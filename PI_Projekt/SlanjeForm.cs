@@ -58,6 +58,14 @@ namespace PI_Projekt
             }
         }
 
-        
+        private void SlanjeForm_Load(object sender, EventArgs e)
+        {
+            comboKonfiguracije.Items.Add("Office konfiguracija");
+            comboKonfiguracije.Items.Add("Gaming konfiguracija");
+            comboKonfiguracije.Items.Add("Budget konfiguracija");
+            comboKonfiguracije.Items.Add("Video editing konfiguracija");
+
+            
+        }
     }
 }

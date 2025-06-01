@@ -118,6 +118,7 @@
             Controls.Add(comboKonfiguracije);
             Name = "SlanjeForm";
             Text = "SlanjeForm";
+            Load += SlanjeForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
